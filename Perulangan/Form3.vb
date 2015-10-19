@@ -1,16 +1,37 @@
 ﻿Public Class Form3
 
-    
-    Dim angka1, angka2 As Integer
-    Dim hasil As String
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        angka1 = Convert.ToInt64(angka1String.Text)
-        angka2 = Convert.ToInt64(angka2String.Text)
+
+        Dim matrix1 As New List(Of Integer)
+        Dim matrix2 As New List(Of Integer)
+        Dim data1 As String() = angka1String.Text.Split(" ")
+        Dim data2 As String() = angka2String.Text.Split(" ")
+
+        For Each d In data1
+            matrix1.Add(Convert.ToInt64(d))
+        Next
+        For Each d In data2
+            matrix2.Add(Convert.ToInt64(d))
+        Next
+
         If operasi.Text = "Tambah" Then
-            hasil = angka1 + angka2
+
+            For i As Integer = 0 To data1.Length - 1
+                Dim a As Integer
+                a = matrix1.Item(i) + matrix2.Item(i)
+                hasilBox.Text &= " " & a
+            Next
         Else
-            hasil = angka1 - angka2
+            For i As Integer = 0 To data1.Length - 1
+                Dim a As Integer
+                a = matrix1.Item(i) - matrix2.Item(i)
+                hasilBox.Text &= " " & a
+            Next
         End If
-        hasilBox.Text = hasil
+
+    End Sub
+
+    Private Sub hasilBox_TextChanged(sender As Object, e As EventArgs) Handles hasilBox.TextChanged
+
     End Sub
 End Class

@@ -32,6 +32,7 @@ Partial Class Form2
         '
         'Pola
         '
+        Me.Pola.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Pola.FormattingEnabled = True
         Me.Pola.Items.AddRange(New Object() {"Piramyd", "Hollow Piramyd", "Inverted Piramyd", "Hollow Inverted Piramyd"})
         Me.Pola.Location = New System.Drawing.Point(57, 17)
@@ -66,6 +67,7 @@ Partial Class Form2
         '
         'hasilBox
         '
+        Me.hasilBox.BackColor = System.Drawing.SystemColors.MenuBar
         Me.hasilBox.Location = New System.Drawing.Point(15, 92)
         Me.hasilBox.Multiline = True
         Me.hasilBox.Name = "hasilBox"

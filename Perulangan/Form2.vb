@@ -24,8 +24,8 @@
                 hasil &= vbCrLf
 
             Next
-        End If
-        If Pola.Text = "Hollow Piramyd" Then
+
+        ElseIf Pola.Text = "Hollow Piramyd" Then
             batasAtas = banyakBaris
             batasBawah = banyakBaris
             For baris As Integer = 1 To banyakBaris
@@ -42,13 +42,13 @@
                             hasil &= " "
                         End If
                     Next
-                    batasBawah -= 1
-                    batasAtas += 1
-                    hasil &= vbCrLf
                 End If
+                batasBawah -= 1
+                batasAtas += 1
+                hasil &= vbCrLf
             Next
-        End If
-        If Pola.Text = "Inverted Piramyd" Then
+
+        ElseIf Pola.Text = "Inverted Piramyd" Then
             batasAtas = banyakKolom
             batasBawah = 1
             For baris As Integer = 1 To banyakBaris
@@ -65,8 +65,7 @@
                 hasil &= vbCrLf
 
             Next
-        End If
-        If Pola.Text = "Hollow Inverted Piramyd" Then
+        ElseIf Pola.Text = "Hollow Inverted Piramyd" Then
             batasAtas = banyakKolom
             batasBawah = 1
             For baris As Integer = 1 To banyakBaris
